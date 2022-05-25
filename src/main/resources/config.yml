@@ -1,0 +1,52 @@
+#This is the configuration file for AdminMode v2.0 by djd001 and WesleyH
+#After changing the values make sure to save the file and reload the plugin
+
+messages:
+  #You receive this message when switching back from admin mode
+  from_admin: '&aYou have left admin mode!'
+  #You receive this message when switching to admin mode
+  to_admin: '&aYou have joined admin mode!'
+
+  #Only matters for those using PlaceholderAPI with this plugin
+  papi_state_true: '[Admin Mode]'
+  papi_state_false: ''
+
+#Allowed values are 'true' and 'false'
+options:
+  #Should players in admin mode have a different inventory than in player mode?
+  change_inventory: true
+  #Should a player leaving admin mode be teleported back to the position he entered the admin mode?
+  tp_back: true
+
+  #Should players in admin mode be able to drop/collect items?
+  drop_collect_admin: false
+
+  #Should players in admin mode be able to damage players/animals/monsters?
+  hit_admin: false
+
+  #Should players in admin mode be able to place/break blocks or interact with the world?
+  interact_admin: false
+
+  #Should players in admin mode be able to modify their inventory?
+  inventory_admin: false
+
+  # If you are using Luckperms, the plugin will assign groups listed in here when
+  # a player joins admin mode. It will also revoke it after admin mode.
+  give_groups: ["testgroup"]
+
+
+#While being in admin mode you can use items to perform predefined commands
+#%a will be replaced with the player in admin mode
+#%p will be replaced with the player you interact with
+commands:
+  # Any item can execute commands in admin mode. Use /aconfig setinv to set an inventory with these items for admin mode users.
+  packed_ice: '/vanish'
+  compass: '/thru'
+  book: '/invsee %p'
+  chest: '/banhistory %p'
+  stick: '/launch %p'
+
+
+
+
+
